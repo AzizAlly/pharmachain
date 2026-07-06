@@ -6,21 +6,35 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "next lint",
+    "setup-blockchain": "node scripts/setup-blockchain.js",
+    "test-blockchain": "node scripts/test-blockchain.js",
+    "test-quick": "node scripts/quick-test.js",
+    "test-api": "node scripts/api-test.js",
+    "test-flow": "node scripts/flow-test.js",
+    "test-all": "npm run test-quick && npm run test-api && npm run test-flow",
+    "db-reset": "node scripts/reset-database.js",
+    "db-backup": "node scripts/backup-database.js",
+    "db-restore": "node scripts/restore-database.js",
+    "seed": "node scripts/seed-database.js",
+    "migrate": "node scripts/migrate-database.js"
   },
   "dependencies": {
-    "next": "16.2.9",
-    "react": "19.2.4",
-    "react-dom": "19.2.4"
+    "better-sqlite3": "^9.0.0",
+    "lucide-react": "^0.263.1",
+    "next": "14.0.4",
+    "qrcode": "^1.5.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "eslint": "^9",
-    "eslint-config-next": "16.2.9",
-    "tailwindcss": "^4",
-    "typescript": "^5"
+    "@tailwindcss/postcss": "^4.3.2",
+    "@types/node": "^20.19.43",
+    "@types/react": "^18.3.31",
+    "@types/react-dom": "^18.3.7",
+    "autoprefixer": "^10.5.2",
+    "postcss": "^8.5.16",
+    "tailwindcss": "^4.0.0",
+    "typescript": "^5.3.0"
   }
 }
